@@ -12,13 +12,13 @@
 <head>
     <title>首页</title>
 </head>
-<script src="${ctx}/resources/jquery/jquery-1.7.2.min.js"></script>
+<script src="${ctx}/resources/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <body>
     <input type="button" id="ajaxTest" value="ajax请求">
 
 </body>
 
-<script text="text/javascript" >
+<script type="text/javascript" >
 
     $(document).off("click", '#ajaxTest');
     $(document).on("click", '#ajaxTest', function(){
