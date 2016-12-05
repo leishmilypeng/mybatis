@@ -1,5 +1,8 @@
 package com.lp.biz.controller;
 
+import com.lp.biz.service.ILoginInfoService;
+import com.lp.common.mapper.TmLoginInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +18,19 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/login")
 public class LoginController {
 
+    @Autowired
+    private ILoginInfoService loginInfoService;
+
     @RequestMapping(value="/index.do")
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response){
 
         String sessionId = request.getSession().getId();
         System.out.println(sessionId);
+
+        TmLoginInfo loginInfo = loginInfoService.getLoginInfoById(Long.valueOf(1));
+        if(loginInfo!=null){
+            System.out.println();
+        }
         ModelAndView mv = new ModelAndView("index");
 
         return mv;

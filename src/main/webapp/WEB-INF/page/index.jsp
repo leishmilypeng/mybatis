@@ -15,10 +15,12 @@
 <script src="${ctx}/resources/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <body>
     <input type="button" id="ajaxTest" value="ajax请求">
+    <img src="${ctx}/resources/image/TOYOTA.png" />
 
 </body>
 
 <script type="text/javascript" >
+
 
     $(document).off("click", '#ajaxTest');
     $(document).on("click", '#ajaxTest', function(){
@@ -34,6 +36,7 @@
             }
         })
     })
+
 
 </script>
 </html>
