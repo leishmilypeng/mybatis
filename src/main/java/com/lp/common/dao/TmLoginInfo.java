@@ -1,4 +1,4 @@
-package com.lp.common.mapper;
+package com.lp.common.dao;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

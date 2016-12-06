@@ -2,7 +2,7 @@ package com.lp.biz.service.impl;
 
 import com.lp.biz.service.ILoginInfoService;
 import com.lp.common.dao.ITmLoginInfoDao;
-import com.lp.common.mapper.TmLoginInfo;
+import com.lp.common.dao.TmLoginInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

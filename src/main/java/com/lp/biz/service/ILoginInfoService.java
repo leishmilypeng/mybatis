@@ -1,7 +1,6 @@
 package com.lp.biz.service;
 
-import com.lp.common.mapper.TmLoginInfo;
-import java.util.Map;
+import com.lp.common.dao.TmLoginInfo;
 
 /**
  * Created by CPR161 on 2016-12-05.
