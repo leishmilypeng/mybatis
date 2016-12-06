@@ -15,7 +15,9 @@
 <script src="${ctx}/resources/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <body>
     <input type="button" id="ajaxTest" value="ajax请求">
-    <img src="${ctx}/resources/image/TOYOTA.png" />
+   <%-- <img src="${ctx}/resources/image/TOYOTA.png" />--%>
+    <input type="button" id="addTest" value="新增">
+    <input type="button" id="delTest" value="删除">
 
 </body>
 
@@ -32,7 +34,37 @@
                 userName: "leipeng"
             },
             success:function(result){
-                Window.openDialog("success");
+                alert(result.message);
+            }
+        })
+    })
+
+    $(document).off("click", '#addTest');
+    $(document).on("click", '#addTest', function(){
+        $.ajax({
+            type: 'post',
+            url: '${ctx}/login/addLoginInfo.do',
+            dataType: 'json',
+            data: {
+                userName: "leipeng"
+            },
+            success:function(result){
+                alert(result.message);
+            }
+        })
+    })
+
+    $(document).off("click", '#delTest');
+    $(document).on("click", '#delTest', function(){
+        $.ajax({
+            type: 'post',
+            url: '${ctx}/login/delLoginInfo.do',
+            dataType: 'json',
+            data: {
+                userName: "leipeng"
+            },
+            success:function(result){
+                alert(result.message);
             }
         })
     })
